@@ -1,0 +1,189 @@
+﻿#include "il2cpp-config.h"
+#include "class-internals.h"
+#include "codegen/il2cpp-codegen.h"
+#include <cstring>
+#include <string.h>
+#include <stdio.h>
+#ifndef _MSC_VER
+#include <alloca.h>
+#else
+#include <malloc.h>
+#endif
+#include <cmath>
+#include <limits>
+#include <assert.h>
+#include "stringLiterals.h"
+
+extern TypeInfo U3CModuleU3E_t0_il2cpp_TypeInfo;
+extern TypeInfo HandEmulator_t7_il2cpp_TypeInfo;
+extern TypeInfo Natrium_t11_il2cpp_TypeInfo;
+extern TypeInfo AboutScreenView_t19_il2cpp_TypeInfo;
+extern TypeInfo ViewType_t21_il2cpp_TypeInfo;
+extern TypeInfo U3CLoadAboutPageForFirstTimeU3Ec__Iterator0_t23_il2cpp_TypeInfo;
+extern TypeInfo AppManager_t22_il2cpp_TypeInfo;
+extern TypeInfo ISampleAppUIElement_t27_il2cpp_TypeInfo;
+extern TypeInfo ISampleAppUIEventHandler_t24_il2cpp_TypeInfo;
+extern TypeInfo ISampleAppUIView_t203_il2cpp_TypeInfo;
+extern TypeInfo InputController_t29_il2cpp_TypeInfo;
+extern TypeInfo SampleAppUIBox_t18_il2cpp_TypeInfo;
+extern TypeInfo SampleAppUIButton_t34_il2cpp_TypeInfo;
+extern TypeInfo SampleAppUICheckButton_t37_il2cpp_TypeInfo;
+extern TypeInfo SampleAppUIConstants_t38_il2cpp_TypeInfo;
+extern TypeInfo SampleAppUILabel_t39_il2cpp_TypeInfo;
+extern TypeInfo SampleAppsUILayout_t41_il2cpp_TypeInfo;
+extern TypeInfo SampleAppUIRadioButton_t42_il2cpp_TypeInfo;
+extern TypeInfo SampleAppUIRect_t35_il2cpp_TypeInfo;
+extern TypeInfo ErrorData_t48_il2cpp_TypeInfo;
+extern TypeInfo SampleInitErrorHandler_t49_il2cpp_TypeInfo;
+extern TypeInfo SceneViewManager_t50_il2cpp_TypeInfo;
+extern TypeInfo SplashScreenView_t25_il2cpp_TypeInfo;
+extern TypeInfo SmoothCameraOrbit_t53_il2cpp_TypeInfo;
+extern TypeInfo BackgroundPlaneBehaviour_t55_il2cpp_TypeInfo;
+extern TypeInfo CloudRecoBehaviour_t57_il2cpp_TypeInfo;
+extern TypeInfo CylinderTargetBehaviour_t59_il2cpp_TypeInfo;
+extern TypeInfo DataSetLoadBehaviour_t61_il2cpp_TypeInfo;
+extern TypeInfo DefaultInitializationErrorHandler_t63_il2cpp_TypeInfo;
+extern TypeInfo DefaultSmartTerrainEventHandler_t67_il2cpp_TypeInfo;
+extern TypeInfo DefaultTrackableEventHandler_t71_il2cpp_TypeInfo;
+extern TypeInfo GLErrorHandler_t72_il2cpp_TypeInfo;
+extern TypeInfo HideExcessAreaBehaviour_t73_il2cpp_TypeInfo;
+extern TypeInfo ImageTargetBehaviour_t75_il2cpp_TypeInfo;
+extern TypeInfo AndroidUnityPlayer_t77_il2cpp_TypeInfo;
+extern TypeInfo ComponentFactoryStarterBehaviour_t78_il2cpp_TypeInfo;
+extern TypeInfo IOSUnityPlayer_t79_il2cpp_TypeInfo;
+extern TypeInfo VuforiaBehaviourComponentFactory_t80_il2cpp_TypeInfo;
+extern TypeInfo KeepAliveBehaviour_t89_il2cpp_TypeInfo;
+extern TypeInfo MarkerBehaviour_t91_il2cpp_TypeInfo;
+extern TypeInfo MaskOutBehaviour_t92_il2cpp_TypeInfo;
+extern TypeInfo MultiTargetBehaviour_t93_il2cpp_TypeInfo;
+extern TypeInfo ObjectTargetBehaviour_t94_il2cpp_TypeInfo;
+extern TypeInfo PropBehaviour_t65_il2cpp_TypeInfo;
+extern TypeInfo QCARBehaviour_t96_il2cpp_TypeInfo;
+extern TypeInfo ReconstructionBehaviour_t64_il2cpp_TypeInfo;
+extern TypeInfo ReconstructionFromTargetBehaviour_t99_il2cpp_TypeInfo;
+extern TypeInfo SmartTerrainTrackerBehaviour_t101_il2cpp_TypeInfo;
+extern TypeInfo SurfaceBehaviour_t66_il2cpp_TypeInfo;
+extern TypeInfo TextRecoBehaviour_t104_il2cpp_TypeInfo;
+extern TypeInfo TurnOffBehaviour_t105_il2cpp_TypeInfo;
+extern TypeInfo TurnOffWordBehaviour_t106_il2cpp_TypeInfo;
+extern TypeInfo UserDefinedTargetBuildingBehaviour_t107_il2cpp_TypeInfo;
+extern TypeInfo VideoBackgroundBehaviour_t109_il2cpp_TypeInfo;
+extern TypeInfo VideoTextureRenderer_t111_il2cpp_TypeInfo;
+extern TypeInfo VirtualButtonBehaviour_t113_il2cpp_TypeInfo;
+extern TypeInfo WebCamBehaviour_t114_il2cpp_TypeInfo;
+extern TypeInfo WireframeBehaviour_t117_il2cpp_TypeInfo;
+extern TypeInfo WireframeTrackableEventHandler_t119_il2cpp_TypeInfo;
+extern TypeInfo WordBehaviour_t120_il2cpp_TypeInfo;
+extern TypeInfo U3CPlayFullscreenVideoAtEndOfFrameU3Ec__Iterator1_t122_il2cpp_TypeInfo;
+extern TypeInfo PlayVideo_t123_il2cpp_TypeInfo;
+extern TypeInfo TrackableEventHandler_t124_il2cpp_TypeInfo;
+extern TypeInfo VideoPlaybackAppManager_t125_il2cpp_TypeInfo;
+extern TypeInfo U3CTriggerAutoFocusAndEnableContinuousFocusIfSetU3Ec__Iterator2_t127_il2cpp_TypeInfo;
+extern TypeInfo VideoPlaybackUIEventHandler_t126_il2cpp_TypeInfo;
+extern TypeInfo VideoPlaybackUIView_t128_il2cpp_TypeInfo;
+extern TypeInfo U3CResetToPortraitSmoothlyU3Ec__Iterator3_t129_il2cpp_TypeInfo;
+extern TypeInfo VideoPlaybackBehaviour_t121_il2cpp_TypeInfo;
+extern TypeInfo MediaState_t131_il2cpp_TypeInfo;
+extern TypeInfo MediaType_t132_il2cpp_TypeInfo;
+extern TypeInfo VideoPlayerHelper_t130_il2cpp_TypeInfo;
+#include "utils/RegisterRuntimeInitializeAndCleanup.h"
+#include <map>
+struct TypeInfo;
+struct MethodInfo;
+TypeInfo* g_AssemblyU2DCSharp_Assembly_Types[73] = 
+{
+	&U3CModuleU3E_t0_il2cpp_TypeInfo,
+	&HandEmulator_t7_il2cpp_TypeInfo,
+	&Natrium_t11_il2cpp_TypeInfo,
+	&AboutScreenView_t19_il2cpp_TypeInfo,
+	&ViewType_t21_il2cpp_TypeInfo,
+	&U3CLoadAboutPageForFirstTimeU3Ec__Iterator0_t23_il2cpp_TypeInfo,
+	&AppManager_t22_il2cpp_TypeInfo,
+	&ISampleAppUIElement_t27_il2cpp_TypeInfo,
+	&ISampleAppUIEventHandler_t24_il2cpp_TypeInfo,
+	&ISampleAppUIView_t203_il2cpp_TypeInfo,
+	&InputController_t29_il2cpp_TypeInfo,
+	&SampleAppUIBox_t18_il2cpp_TypeInfo,
+	&SampleAppUIButton_t34_il2cpp_TypeInfo,
+	&SampleAppUICheckButton_t37_il2cpp_TypeInfo,
+	&SampleAppUIConstants_t38_il2cpp_TypeInfo,
+	&SampleAppUILabel_t39_il2cpp_TypeInfo,
+	&SampleAppsUILayout_t41_il2cpp_TypeInfo,
+	&SampleAppUIRadioButton_t42_il2cpp_TypeInfo,
+	&SampleAppUIRect_t35_il2cpp_TypeInfo,
+	&ErrorData_t48_il2cpp_TypeInfo,
+	&SampleInitErrorHandler_t49_il2cpp_TypeInfo,
+	&SceneViewManager_t50_il2cpp_TypeInfo,
+	&SplashScreenView_t25_il2cpp_TypeInfo,
+	&SmoothCameraOrbit_t53_il2cpp_TypeInfo,
+	&BackgroundPlaneBehaviour_t55_il2cpp_TypeInfo,
+	&CloudRecoBehaviour_t57_il2cpp_TypeInfo,
+	&CylinderTargetBehaviour_t59_il2cpp_TypeInfo,
+	&DataSetLoadBehaviour_t61_il2cpp_TypeInfo,
+	&DefaultInitializationErrorHandler_t63_il2cpp_TypeInfo,
+	&DefaultSmartTerrainEventHandler_t67_il2cpp_TypeInfo,
+	&DefaultTrackableEventHandler_t71_il2cpp_TypeInfo,
+	&GLErrorHandler_t72_il2cpp_TypeInfo,
+	&HideExcessAreaBehaviour_t73_il2cpp_TypeInfo,
+	&ImageTargetBehaviour_t75_il2cpp_TypeInfo,
+	&AndroidUnityPlayer_t77_il2cpp_TypeInfo,
+	&ComponentFactoryStarterBehaviour_t78_il2cpp_TypeInfo,
+	&IOSUnityPlayer_t79_il2cpp_TypeInfo,
+	&VuforiaBehaviourComponentFactory_t80_il2cpp_TypeInfo,
+	&KeepAliveBehaviour_t89_il2cpp_TypeInfo,
+	&MarkerBehaviour_t91_il2cpp_TypeInfo,
+	&MaskOutBehaviour_t92_il2cpp_TypeInfo,
+	&MultiTargetBehaviour_t93_il2cpp_TypeInfo,
+	&ObjectTargetBehaviour_t94_il2cpp_TypeInfo,
+	&PropBehaviour_t65_il2cpp_TypeInfo,
+	&QCARBehaviour_t96_il2cpp_TypeInfo,
+	&ReconstructionBehaviour_t64_il2cpp_TypeInfo,
+	&ReconstructionFromTargetBehaviour_t99_il2cpp_TypeInfo,
+	&SmartTerrainTrackerBehaviour_t101_il2cpp_TypeInfo,
+	&SurfaceBehaviour_t66_il2cpp_TypeInfo,
+	&TextRecoBehaviour_t104_il2cpp_TypeInfo,
+	&TurnOffBehaviour_t105_il2cpp_TypeInfo,
+	&TurnOffWordBehaviour_t106_il2cpp_TypeInfo,
+	&UserDefinedTargetBuildingBehaviour_t107_il2cpp_TypeInfo,
+	&VideoBackgroundBehaviour_t109_il2cpp_TypeInfo,
+	&VideoTextureRenderer_t111_il2cpp_TypeInfo,
+	&VirtualButtonBehaviour_t113_il2cpp_TypeInfo,
+	&WebCamBehaviour_t114_il2cpp_TypeInfo,
+	&WireframeBehaviour_t117_il2cpp_TypeInfo,
+	&WireframeTrackableEventHandler_t119_il2cpp_TypeInfo,
+	&WordBehaviour_t120_il2cpp_TypeInfo,
+	&U3CPlayFullscreenVideoAtEndOfFrameU3Ec__Iterator1_t122_il2cpp_TypeInfo,
+	&PlayVideo_t123_il2cpp_TypeInfo,
+	&TrackableEventHandler_t124_il2cpp_TypeInfo,
+	&VideoPlaybackAppManager_t125_il2cpp_TypeInfo,
+	&U3CTriggerAutoFocusAndEnableContinuousFocusIfSetU3Ec__Iterator2_t127_il2cpp_TypeInfo,
+	&VideoPlaybackUIEventHandler_t126_il2cpp_TypeInfo,
+	&VideoPlaybackUIView_t128_il2cpp_TypeInfo,
+	&U3CResetToPortraitSmoothlyU3Ec__Iterator3_t129_il2cpp_TypeInfo,
+	&VideoPlaybackBehaviour_t121_il2cpp_TypeInfo,
+	&MediaState_t131_il2cpp_TypeInfo,
+	&MediaType_t132_il2cpp_TypeInfo,
+	&VideoPlayerHelper_t130_il2cpp_TypeInfo,
+	NULL,
+};
+extern Il2CppImage g_AssemblyU2DCSharp_dll_Image;
+extern CustomAttributesCache g_AssemblyU2DCSharp_Assembly__CustomAttributeCache;
+Il2CppAssembly g_AssemblyU2DCSharp_Assembly = 
+{
+	{ "Assembly-CSharp", 0, 0, 0, { 0 }, 32772, 0, 0, 0, 0, 0, 0 },
+	&g_AssemblyU2DCSharp_dll_Image,
+	&g_AssemblyU2DCSharp_Assembly__CustomAttributeCache,
+};
+Il2CppImage g_AssemblyU2DCSharp_dll_Image = 
+{
+	 "Assembly-CSharp.dll" ,
+	&g_AssemblyU2DCSharp_Assembly,
+	g_AssemblyU2DCSharp_Assembly_Types,
+	72,
+	NULL,
+};
+static void s_AssemblyU2DCSharpRegistration()
+{
+	RegisterAssembly (&g_AssemblyU2DCSharp_Assembly);
+}
+static il2cpp::utils::RegisterRuntimeInitializeAndCleanup s_AssemblyU2DCSharpRegistrationVariable(&s_AssemblyU2DCSharpRegistration, NULL);

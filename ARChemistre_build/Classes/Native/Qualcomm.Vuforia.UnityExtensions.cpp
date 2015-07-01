@@ -1,0 +1,475 @@
+﻿#include "il2cpp-config.h"
+#include "class-internals.h"
+#include "codegen/il2cpp-codegen.h"
+#include <cstring>
+#include <string.h>
+#include <stdio.h>
+#ifndef _MSC_VER
+#include <alloca.h>
+#else
+#include <malloc.h>
+#endif
+#include <cmath>
+#include <limits>
+#include <assert.h>
+#include "stringLiterals.h"
+
+extern TypeInfo U3CModuleU3E_t603_il2cpp_TypeInfo;
+extern TypeInfo NullEyewearComponentFactory_t604_il2cpp_TypeInfo;
+extern TypeInfo EyewearComponentFactory_t606_il2cpp_TypeInfo;
+extern TypeInfo IEyewearComponentFactory_t605_il2cpp_TypeInfo;
+extern TypeInfo FactorySetter_t172_il2cpp_TypeInfo;
+extern TypeInfo IEditorQCARBehaviour_t229_il2cpp_TypeInfo;
+extern TypeInfo InternalEyewearCalibrationProfileManager_t607_il2cpp_TypeInfo;
+extern TypeInfo IVideoBackgroundEventHandler_t214_il2cpp_TypeInfo;
+extern TypeInfo BackgroundPlaneAbstractBehaviour_t56_il2cpp_TypeInfo;
+extern TypeInfo IEditorTrackableBehaviour_t217_il2cpp_TypeInfo;
+extern TypeInfo IEditorDataSetTrackableBehaviour_t216_il2cpp_TypeInfo;
+extern TypeInfo IEditorObjectTargetBehaviour_t227_il2cpp_TypeInfo;
+extern TypeInfo InternalEyewearUserCalibrator_t609_il2cpp_TypeInfo;
+extern TypeInfo IOSCamRecoveringHelper_t612_il2cpp_TypeInfo;
+extern TypeInfo UnityCameraExtensions_t613_il2cpp_TypeInfo;
+extern TypeInfo Trackable_t614_il2cpp_TypeInfo;
+extern TypeInfo ExtendedTrackable_t201_il2cpp_TypeInfo;
+extern TypeInfo ObjectTarget_t618_il2cpp_TypeInfo;
+extern TypeInfo Status_t219_il2cpp_TypeInfo;
+extern TypeInfo TrackableBehaviour_t70_il2cpp_TypeInfo;
+extern TypeInfo WorldCenterTrackableBehaviour_t218_il2cpp_TypeInfo;
+extern TypeInfo DataSetTrackableBehaviour_t616_il2cpp_TypeInfo;
+extern TypeInfo ObjectTargetAbstractBehaviour_t88_il2cpp_TypeInfo;
+extern TypeInfo CameraDeviceMode_t619_il2cpp_TypeInfo;
+extern TypeInfo FocusMode_t193_il2cpp_TypeInfo;
+extern TypeInfo CameraDirection_t197_il2cpp_TypeInfo;
+extern TypeInfo VideoModeData_t620_il2cpp_TypeInfo;
+extern TypeInfo CameraDevice_t192_il2cpp_TypeInfo;
+extern TypeInfo CloudRecoAbstractBehaviour_t58_il2cpp_TypeInfo;
+extern TypeInfo IEditorSmartTerrainTrackerBehaviour_t231_il2cpp_TypeInfo;
+extern TypeInfo ReconstructionImpl_t624_il2cpp_TypeInfo;
+extern TypeInfo HideExcessAreaAbstractBehaviour_t74_il2cpp_TypeInfo;
+extern TypeInfo TrackableImpl_t625_il2cpp_TypeInfo;
+extern TypeInfo ObjectTargetImpl_t627_il2cpp_TypeInfo;
+extern TypeInfo UnityPlayer_t629_il2cpp_TypeInfo;
+extern TypeInfo IUnityPlayer_t223_il2cpp_TypeInfo;
+extern TypeInfo NullUnityPlayer_t177_il2cpp_TypeInfo;
+extern TypeInfo PlayModeUnityPlayer_t178_il2cpp_TypeInfo;
+extern TypeInfo Reconstruction_t636_il2cpp_TypeInfo;
+extern TypeInfo ReconstructionFromTarget_t617_il2cpp_TypeInfo;
+extern TypeInfo ReconstructionFromTargetImpl_t630_il2cpp_TypeInfo;
+extern TypeInfo ReconstructionFromTargetAbstractBehaviour_t100_il2cpp_TypeInfo;
+extern TypeInfo SmartTerrainBuilder_t634_il2cpp_TypeInfo;
+extern TypeInfo EyeID_t637_il2cpp_TypeInfo;
+extern TypeInfo EyewearCalibrationReading_t611_il2cpp_TypeInfo;
+extern TypeInfo InternalEyewear_t639_il2cpp_TypeInfo;
+extern TypeInfo SmartTerrainInitializationInfo_t640_il2cpp_TypeInfo;
+extern TypeInfo SmartTerrainTrackableBehaviour_t643_il2cpp_TypeInfo;
+extern TypeInfo IEditorSurfaceBehaviour_t232_il2cpp_TypeInfo;
+extern TypeInfo SmartTerrainTrackerAbstractBehaviour_t102_il2cpp_TypeInfo;
+extern TypeInfo SurfaceAbstractBehaviour_t103_il2cpp_TypeInfo;
+extern TypeInfo CylinderTarget_t631_il2cpp_TypeInfo;
+extern TypeInfo IEditorCylinderTargetBehaviour_t215_il2cpp_TypeInfo;
+extern TypeInfo CylinderTargetAbstractBehaviour_t60_il2cpp_TypeInfo;
+extern TypeInfo StorageType_t644_il2cpp_TypeInfo;
+extern TypeInfo DataSet_t628_il2cpp_TypeInfo;
+extern TypeInfo DataSetLoadAbstractBehaviour_t62_il2cpp_TypeInfo;
+extern TypeInfo RectangleData_t648_il2cpp_TypeInfo;
+extern TypeInfo RectangleIntData_t649_il2cpp_TypeInfo;
+extern TypeInfo OrientedBoundingBox_t650_il2cpp_TypeInfo;
+extern TypeInfo OrientedBoundingBox3D_t651_il2cpp_TypeInfo;
+extern TypeInfo ICloudRecoEventHandler_t623_il2cpp_TypeInfo;
+extern TypeInfo ILoadLevelEventHandler_t770_il2cpp_TypeInfo;
+extern TypeInfo NullBehaviourComponentFactory_t652_il2cpp_TypeInfo;
+extern TypeInfo BehaviourComponentFactory_t653_il2cpp_TypeInfo;
+extern TypeInfo IBehaviourComponentFactory_t224_il2cpp_TypeInfo;
+extern TypeInfo ImageTarget_t632_il2cpp_TypeInfo;
+extern TypeInfo CloudRecoImageTargetImpl_t654_il2cpp_TypeInfo;
+extern TypeInfo CylinderTargetImpl_t657_il2cpp_TypeInfo;
+extern TypeInfo IEditorMultiTargetBehaviour_t226_il2cpp_TypeInfo;
+extern TypeInfo ImageTargetType_t658_il2cpp_TypeInfo;
+extern TypeInfo ImageTargetData_t659_il2cpp_TypeInfo;
+extern TypeInfo FrameQuality_t660_il2cpp_TypeInfo;
+extern TypeInfo ImageTargetBuilder_t661_il2cpp_TypeInfo;
+extern TypeInfo CameraDeviceImpl_t665_il2cpp_TypeInfo;
+extern TypeInfo DataSetImpl_t626_il2cpp_TypeInfo;
+extern TypeInfo IEditorImageTargetBehaviour_t221_il2cpp_TypeInfo;
+extern TypeInfo IEditorMarkerBehaviour_t225_il2cpp_TypeInfo;
+extern TypeInfo IEditorReconstructionBehaviour_t230_il2cpp_TypeInfo;
+extern TypeInfo IEditorPropBehaviour_t228_il2cpp_TypeInfo;
+extern TypeInfo IEditorTextRecoBehaviour_t233_il2cpp_TypeInfo;
+extern TypeInfo IEditorVirtualButtonBehaviour_t234_il2cpp_TypeInfo;
+extern TypeInfo WordTemplateMode_t667_il2cpp_TypeInfo;
+extern TypeInfo IEditorWordBehaviour_t235_il2cpp_TypeInfo;
+extern TypeInfo PIXEL_FORMAT_t668_il2cpp_TypeInfo;
+extern TypeInfo Image_t621_il2cpp_TypeInfo;
+extern TypeInfo ImageImpl_t671_il2cpp_TypeInfo;
+extern TypeInfo ImageTargetBuilderImpl_t672_il2cpp_TypeInfo;
+extern TypeInfo ImageTargetImpl_t674_il2cpp_TypeInfo;
+extern TypeInfo Tracker_t196_il2cpp_TypeInfo;
+extern TypeInfo ObjectTracker_t195_il2cpp_TypeInfo;
+extern TypeInfo ObjectTrackerImpl_t679_il2cpp_TypeInfo;
+extern TypeInfo IPremiumObjectFactory_t695_il2cpp_TypeInfo;
+extern TypeInfo Marker_t682_il2cpp_TypeInfo;
+extern TypeInfo MarkerImpl_t680_il2cpp_TypeInfo;
+extern TypeInfo MarkerTracker_t681_il2cpp_TypeInfo;
+extern TypeInfo MarkerTrackerImpl_t685_il2cpp_TypeInfo;
+extern TypeInfo MultiTarget_t633_il2cpp_TypeInfo;
+extern TypeInfo MultiTargetImpl_t686_il2cpp_TypeInfo;
+extern TypeInfo WebCamTexAdaptor_t687_il2cpp_TypeInfo;
+extern TypeInfo NullWebCamTexAdaptor_t688_il2cpp_TypeInfo;
+extern TypeInfo NullPlayModeEditorUtility_t690_il2cpp_TypeInfo;
+extern TypeInfo PlayModeEditorUtility_t693_il2cpp_TypeInfo;
+extern TypeInfo IPlayModeEditorUtility_t692_il2cpp_TypeInfo;
+extern TypeInfo NullPremiumObjectFactory_t694_il2cpp_TypeInfo;
+extern TypeInfo PremiumObjectFactory_t696_il2cpp_TypeInfo;
+extern TypeInfo QCARManager_t181_il2cpp_TypeInfo;
+extern TypeInfo PoseData_t697_il2cpp_TypeInfo;
+extern TypeInfo TrackableResultData_t698_il2cpp_TypeInfo;
+extern TypeInfo VirtualButtonData_t699_il2cpp_TypeInfo;
+extern TypeInfo Obb2D_t700_il2cpp_TypeInfo;
+extern TypeInfo Obb3D_t701_il2cpp_TypeInfo;
+extern TypeInfo WordResultData_t702_il2cpp_TypeInfo;
+extern TypeInfo WordData_t703_il2cpp_TypeInfo;
+extern TypeInfo ImageHeaderData_t704_il2cpp_TypeInfo;
+extern TypeInfo MeshData_t705_il2cpp_TypeInfo;
+extern TypeInfo SmartTerrainRevisionData_t706_il2cpp_TypeInfo;
+extern TypeInfo SurfaceData_t707_il2cpp_TypeInfo;
+extern TypeInfo PropData_t708_il2cpp_TypeInfo;
+extern TypeInfo FrameState_t709_il2cpp_TypeInfo;
+extern TypeInfo AutoRotationState_t710_il2cpp_TypeInfo;
+extern TypeInfo U3CU3Ec__DisplayClass3_t711_il2cpp_TypeInfo;
+extern TypeInfo QCARManagerImpl_t716_il2cpp_TypeInfo;
+extern TypeInfo VideoBackgroundReflection_t718_il2cpp_TypeInfo;
+extern TypeInfo VideoBGCfgData_t719_il2cpp_TypeInfo;
+extern TypeInfo Vec2I_t689_il2cpp_TypeInfo;
+extern TypeInfo VideoTextureInfo_t608_il2cpp_TypeInfo;
+extern TypeInfo QCARRenderer_t720_il2cpp_TypeInfo;
+extern TypeInfo RenderEvent_t722_il2cpp_TypeInfo;
+extern TypeInfo QCARRendererImpl_t721_il2cpp_TypeInfo;
+extern TypeInfo QCARUnityImpl_t723_il2cpp_TypeInfo;
+extern TypeInfo SmartTerrainTrackable_t641_il2cpp_TypeInfo;
+extern TypeInfo SmartTerrainTrackableImpl_t725_il2cpp_TypeInfo;
+extern TypeInfo Surface_t69_il2cpp_TypeInfo;
+extern TypeInfo SurfaceImpl_t727_il2cpp_TypeInfo;
+extern TypeInfo SmartTerrainBuilderImpl_t729_il2cpp_TypeInfo;
+extern TypeInfo Prop_t68_il2cpp_TypeInfo;
+extern TypeInfo PropImpl_t733_il2cpp_TypeInfo;
+extern TypeInfo SmartTerrainTracker_t734_il2cpp_TypeInfo;
+extern TypeInfo SmartTerrainTrackerImpl_t735_il2cpp_TypeInfo;
+extern TypeInfo TextTracker_t736_il2cpp_TypeInfo;
+extern TypeInfo UpDirection_t738_il2cpp_TypeInfo;
+extern TypeInfo TextTrackerImpl_t739_il2cpp_TypeInfo;
+extern TypeInfo TypeMapping_t741_il2cpp_TypeInfo;
+extern TypeInfo WebCamTexAdaptorImpl_t743_il2cpp_TypeInfo;
+extern TypeInfo Word_t750_il2cpp_TypeInfo;
+extern TypeInfo WordImpl_t745_il2cpp_TypeInfo;
+extern TypeInfo WordPrefabCreationMode_t746_il2cpp_TypeInfo;
+extern TypeInfo WordManager_t747_il2cpp_TypeInfo;
+extern TypeInfo WordManagerImpl_t758_il2cpp_TypeInfo;
+extern TypeInfo WordResult_t761_il2cpp_TypeInfo;
+extern TypeInfo WordResultImpl_t762_il2cpp_TypeInfo;
+extern TypeInfo WordList_t737_il2cpp_TypeInfo;
+extern TypeInfo WordListImpl_t763_il2cpp_TypeInfo;
+extern TypeInfo IQCARWrapper_t767_il2cpp_TypeInfo;
+extern TypeInfo QCARNativeIosWrapper_t764_il2cpp_TypeInfo;
+extern TypeInfo QCARNullWrapper_t765_il2cpp_TypeInfo;
+extern TypeInfo QCARNativeWrapper_t766_il2cpp_TypeInfo;
+extern TypeInfo QCARWrapper_t768_il2cpp_TypeInfo;
+extern TypeInfo ISmartTerrainEventHandler_t777_il2cpp_TypeInfo;
+extern TypeInfo ITextRecoEventHandler_t820_il2cpp_TypeInfo;
+extern TypeInfo IUserDefinedTargetEventHandler_t823_il2cpp_TypeInfo;
+extern TypeInfo KeepAliveAbstractBehaviour_t90_il2cpp_TypeInfo;
+extern TypeInfo ReconstructionAbstractBehaviour_t98_il2cpp_TypeInfo;
+extern TypeInfo PropAbstractBehaviour_t95_il2cpp_TypeInfo;
+extern TypeInfo StateManager_t198_il2cpp_TypeInfo;
+extern TypeInfo StateManagerImpl_t717_il2cpp_TypeInfo;
+extern TypeInfo InitState_t787_il2cpp_TypeInfo;
+extern TypeInfo UpdateState_t788_il2cpp_TypeInfo;
+extern TypeInfo TargetSearchResult_t789_il2cpp_TypeInfo;
+extern TypeInfo TargetFinder_t675_il2cpp_TypeInfo;
+extern TypeInfo TargetFinderState_t792_il2cpp_TypeInfo;
+extern TypeInfo InternalTargetSearchResult_t793_il2cpp_TypeInfo;
+extern TypeInfo TargetFinderImpl_t796_il2cpp_TypeInfo;
+extern TypeInfo TrackableSource_t646_il2cpp_TypeInfo;
+extern TypeInfo TrackableSourceImpl_t797_il2cpp_TypeInfo;
+extern TypeInfo TextureRenderer_t798_il2cpp_TypeInfo;
+extern TypeInfo TrackerManager_t194_il2cpp_TypeInfo;
+extern TypeInfo TrackerManagerImpl_t800_il2cpp_TypeInfo;
+extern TypeInfo Sensitivity_t801_il2cpp_TypeInfo;
+extern TypeInfo VirtualButton_t655_il2cpp_TypeInfo;
+extern TypeInfo VirtualButtonImpl_t802_il2cpp_TypeInfo;
+extern TypeInfo WebCamImpl_t664_il2cpp_TypeInfo;
+extern TypeInfo ProfileData_t803_il2cpp_TypeInfo;
+extern TypeInfo ProfileCollection_t691_il2cpp_TypeInfo;
+extern TypeInfo WebCamProfile_t805_il2cpp_TypeInfo;
+extern TypeInfo ITrackableEventHandler_t220_il2cpp_TypeInfo;
+extern TypeInfo ITrackerEventHandler_t816_il2cpp_TypeInfo;
+extern TypeInfo IVirtualButtonEventHandler_t826_il2cpp_TypeInfo;
+extern TypeInfo ImageTargetAbstractBehaviour_t76_il2cpp_TypeInfo;
+extern TypeInfo MarkerAbstractBehaviour_t84_il2cpp_TypeInfo;
+extern TypeInfo MaskOutAbstractBehaviour_t81_il2cpp_TypeInfo;
+extern TypeInfo MultiTargetAbstractBehaviour_t85_il2cpp_TypeInfo;
+extern TypeInfo InitError_t156_il2cpp_TypeInfo;
+extern TypeInfo QCARHint_t808_il2cpp_TypeInfo;
+extern TypeInfo StorageType_t809_il2cpp_TypeInfo;
+extern TypeInfo QCARUnity_t810_il2cpp_TypeInfo;
+extern TypeInfo WorldCenterMode_t811_il2cpp_TypeInfo;
+extern TypeInfo QCARAbstractBehaviour_t97_il2cpp_TypeInfo;
+extern TypeInfo QCARMacros_t817_il2cpp_TypeInfo;
+extern TypeInfo WebCamUsed_t818_il2cpp_TypeInfo;
+extern TypeInfo QCARRuntimeUtilities_t159_il2cpp_TypeInfo;
+extern TypeInfo SurfaceUtilities_t167_il2cpp_TypeInfo;
+extern TypeInfo TextRecoAbstractBehaviour_t87_il2cpp_TypeInfo;
+extern TypeInfo SimpleTargetData_t821_il2cpp_TypeInfo;
+extern TypeInfo TurnOffAbstractBehaviour_t83_il2cpp_TypeInfo;
+extern TypeInfo UserDefinedTargetBuildingAbstractBehaviour_t108_il2cpp_TypeInfo;
+extern TypeInfo VideoBackgroundAbstractBehaviour_t110_il2cpp_TypeInfo;
+extern TypeInfo VideoTextureRendererAbstractBehaviour_t112_il2cpp_TypeInfo;
+extern TypeInfo VirtualButtonAbstractBehaviour_t82_il2cpp_TypeInfo;
+extern TypeInfo WebCamAbstractBehaviour_t115_il2cpp_TypeInfo;
+extern TypeInfo WordAbstractBehaviour_t86_il2cpp_TypeInfo;
+extern TypeInfo WordFilterMode_t827_il2cpp_TypeInfo;
+extern TypeInfo __StaticArrayInitTypeSizeU3D24_t828_il2cpp_TypeInfo;
+extern TypeInfo U3CPrivateImplementationDetailsU3EU7B66DCC020U2DEBD6U2D4DBAU2DA757U2D272BEBA33044U7D_t829_il2cpp_TypeInfo;
+#include "utils/RegisterRuntimeInitializeAndCleanup.h"
+#include <map>
+struct TypeInfo;
+struct MethodInfo;
+TypeInfo* g_Qualcomm_Vuforia_UnityExtensions_Assembly_Types[216] = 
+{
+	&U3CModuleU3E_t603_il2cpp_TypeInfo,
+	&NullEyewearComponentFactory_t604_il2cpp_TypeInfo,
+	&EyewearComponentFactory_t606_il2cpp_TypeInfo,
+	&IEyewearComponentFactory_t605_il2cpp_TypeInfo,
+	&FactorySetter_t172_il2cpp_TypeInfo,
+	&IEditorQCARBehaviour_t229_il2cpp_TypeInfo,
+	&InternalEyewearCalibrationProfileManager_t607_il2cpp_TypeInfo,
+	&IVideoBackgroundEventHandler_t214_il2cpp_TypeInfo,
+	&BackgroundPlaneAbstractBehaviour_t56_il2cpp_TypeInfo,
+	&IEditorTrackableBehaviour_t217_il2cpp_TypeInfo,
+	&IEditorDataSetTrackableBehaviour_t216_il2cpp_TypeInfo,
+	&IEditorObjectTargetBehaviour_t227_il2cpp_TypeInfo,
+	&InternalEyewearUserCalibrator_t609_il2cpp_TypeInfo,
+	&IOSCamRecoveringHelper_t612_il2cpp_TypeInfo,
+	&UnityCameraExtensions_t613_il2cpp_TypeInfo,
+	&Trackable_t614_il2cpp_TypeInfo,
+	&ExtendedTrackable_t201_il2cpp_TypeInfo,
+	&ObjectTarget_t618_il2cpp_TypeInfo,
+	&Status_t219_il2cpp_TypeInfo,
+	&TrackableBehaviour_t70_il2cpp_TypeInfo,
+	&WorldCenterTrackableBehaviour_t218_il2cpp_TypeInfo,
+	&DataSetTrackableBehaviour_t616_il2cpp_TypeInfo,
+	&ObjectTargetAbstractBehaviour_t88_il2cpp_TypeInfo,
+	&CameraDeviceMode_t619_il2cpp_TypeInfo,
+	&FocusMode_t193_il2cpp_TypeInfo,
+	&CameraDirection_t197_il2cpp_TypeInfo,
+	&VideoModeData_t620_il2cpp_TypeInfo,
+	&CameraDevice_t192_il2cpp_TypeInfo,
+	&CloudRecoAbstractBehaviour_t58_il2cpp_TypeInfo,
+	&IEditorSmartTerrainTrackerBehaviour_t231_il2cpp_TypeInfo,
+	&ReconstructionImpl_t624_il2cpp_TypeInfo,
+	&HideExcessAreaAbstractBehaviour_t74_il2cpp_TypeInfo,
+	&TrackableImpl_t625_il2cpp_TypeInfo,
+	&ObjectTargetImpl_t627_il2cpp_TypeInfo,
+	&UnityPlayer_t629_il2cpp_TypeInfo,
+	&IUnityPlayer_t223_il2cpp_TypeInfo,
+	&NullUnityPlayer_t177_il2cpp_TypeInfo,
+	&PlayModeUnityPlayer_t178_il2cpp_TypeInfo,
+	&Reconstruction_t636_il2cpp_TypeInfo,
+	&ReconstructionFromTarget_t617_il2cpp_TypeInfo,
+	&ReconstructionFromTargetImpl_t630_il2cpp_TypeInfo,
+	&ReconstructionFromTargetAbstractBehaviour_t100_il2cpp_TypeInfo,
+	&SmartTerrainBuilder_t634_il2cpp_TypeInfo,
+	&EyeID_t637_il2cpp_TypeInfo,
+	&EyewearCalibrationReading_t611_il2cpp_TypeInfo,
+	&InternalEyewear_t639_il2cpp_TypeInfo,
+	&SmartTerrainInitializationInfo_t640_il2cpp_TypeInfo,
+	&SmartTerrainTrackableBehaviour_t643_il2cpp_TypeInfo,
+	&IEditorSurfaceBehaviour_t232_il2cpp_TypeInfo,
+	&SmartTerrainTrackerAbstractBehaviour_t102_il2cpp_TypeInfo,
+	&SurfaceAbstractBehaviour_t103_il2cpp_TypeInfo,
+	&CylinderTarget_t631_il2cpp_TypeInfo,
+	&IEditorCylinderTargetBehaviour_t215_il2cpp_TypeInfo,
+	&CylinderTargetAbstractBehaviour_t60_il2cpp_TypeInfo,
+	&StorageType_t644_il2cpp_TypeInfo,
+	&DataSet_t628_il2cpp_TypeInfo,
+	&DataSetLoadAbstractBehaviour_t62_il2cpp_TypeInfo,
+	&RectangleData_t648_il2cpp_TypeInfo,
+	&RectangleIntData_t649_il2cpp_TypeInfo,
+	&OrientedBoundingBox_t650_il2cpp_TypeInfo,
+	&OrientedBoundingBox3D_t651_il2cpp_TypeInfo,
+	&ICloudRecoEventHandler_t623_il2cpp_TypeInfo,
+	&ILoadLevelEventHandler_t770_il2cpp_TypeInfo,
+	&NullBehaviourComponentFactory_t652_il2cpp_TypeInfo,
+	&BehaviourComponentFactory_t653_il2cpp_TypeInfo,
+	&IBehaviourComponentFactory_t224_il2cpp_TypeInfo,
+	&ImageTarget_t632_il2cpp_TypeInfo,
+	&CloudRecoImageTargetImpl_t654_il2cpp_TypeInfo,
+	&CylinderTargetImpl_t657_il2cpp_TypeInfo,
+	&IEditorMultiTargetBehaviour_t226_il2cpp_TypeInfo,
+	&ImageTargetType_t658_il2cpp_TypeInfo,
+	&ImageTargetData_t659_il2cpp_TypeInfo,
+	&FrameQuality_t660_il2cpp_TypeInfo,
+	&ImageTargetBuilder_t661_il2cpp_TypeInfo,
+	&CameraDeviceImpl_t665_il2cpp_TypeInfo,
+	&DataSetImpl_t626_il2cpp_TypeInfo,
+	&IEditorImageTargetBehaviour_t221_il2cpp_TypeInfo,
+	&IEditorMarkerBehaviour_t225_il2cpp_TypeInfo,
+	&IEditorReconstructionBehaviour_t230_il2cpp_TypeInfo,
+	&IEditorPropBehaviour_t228_il2cpp_TypeInfo,
+	&IEditorTextRecoBehaviour_t233_il2cpp_TypeInfo,
+	&IEditorVirtualButtonBehaviour_t234_il2cpp_TypeInfo,
+	&WordTemplateMode_t667_il2cpp_TypeInfo,
+	&IEditorWordBehaviour_t235_il2cpp_TypeInfo,
+	&PIXEL_FORMAT_t668_il2cpp_TypeInfo,
+	&Image_t621_il2cpp_TypeInfo,
+	&ImageImpl_t671_il2cpp_TypeInfo,
+	&ImageTargetBuilderImpl_t672_il2cpp_TypeInfo,
+	&ImageTargetImpl_t674_il2cpp_TypeInfo,
+	&Tracker_t196_il2cpp_TypeInfo,
+	&ObjectTracker_t195_il2cpp_TypeInfo,
+	&ObjectTrackerImpl_t679_il2cpp_TypeInfo,
+	&IPremiumObjectFactory_t695_il2cpp_TypeInfo,
+	&Marker_t682_il2cpp_TypeInfo,
+	&MarkerImpl_t680_il2cpp_TypeInfo,
+	&MarkerTracker_t681_il2cpp_TypeInfo,
+	&MarkerTrackerImpl_t685_il2cpp_TypeInfo,
+	&MultiTarget_t633_il2cpp_TypeInfo,
+	&MultiTargetImpl_t686_il2cpp_TypeInfo,
+	&WebCamTexAdaptor_t687_il2cpp_TypeInfo,
+	&NullWebCamTexAdaptor_t688_il2cpp_TypeInfo,
+	&NullPlayModeEditorUtility_t690_il2cpp_TypeInfo,
+	&PlayModeEditorUtility_t693_il2cpp_TypeInfo,
+	&IPlayModeEditorUtility_t692_il2cpp_TypeInfo,
+	&NullPremiumObjectFactory_t694_il2cpp_TypeInfo,
+	&PremiumObjectFactory_t696_il2cpp_TypeInfo,
+	&QCARManager_t181_il2cpp_TypeInfo,
+	&PoseData_t697_il2cpp_TypeInfo,
+	&TrackableResultData_t698_il2cpp_TypeInfo,
+	&VirtualButtonData_t699_il2cpp_TypeInfo,
+	&Obb2D_t700_il2cpp_TypeInfo,
+	&Obb3D_t701_il2cpp_TypeInfo,
+	&WordResultData_t702_il2cpp_TypeInfo,
+	&WordData_t703_il2cpp_TypeInfo,
+	&ImageHeaderData_t704_il2cpp_TypeInfo,
+	&MeshData_t705_il2cpp_TypeInfo,
+	&SmartTerrainRevisionData_t706_il2cpp_TypeInfo,
+	&SurfaceData_t707_il2cpp_TypeInfo,
+	&PropData_t708_il2cpp_TypeInfo,
+	&FrameState_t709_il2cpp_TypeInfo,
+	&AutoRotationState_t710_il2cpp_TypeInfo,
+	&U3CU3Ec__DisplayClass3_t711_il2cpp_TypeInfo,
+	&QCARManagerImpl_t716_il2cpp_TypeInfo,
+	&VideoBackgroundReflection_t718_il2cpp_TypeInfo,
+	&VideoBGCfgData_t719_il2cpp_TypeInfo,
+	&Vec2I_t689_il2cpp_TypeInfo,
+	&VideoTextureInfo_t608_il2cpp_TypeInfo,
+	&QCARRenderer_t720_il2cpp_TypeInfo,
+	&RenderEvent_t722_il2cpp_TypeInfo,
+	&QCARRendererImpl_t721_il2cpp_TypeInfo,
+	&QCARUnityImpl_t723_il2cpp_TypeInfo,
+	&SmartTerrainTrackable_t641_il2cpp_TypeInfo,
+	&SmartTerrainTrackableImpl_t725_il2cpp_TypeInfo,
+	&Surface_t69_il2cpp_TypeInfo,
+	&SurfaceImpl_t727_il2cpp_TypeInfo,
+	&SmartTerrainBuilderImpl_t729_il2cpp_TypeInfo,
+	&Prop_t68_il2cpp_TypeInfo,
+	&PropImpl_t733_il2cpp_TypeInfo,
+	&SmartTerrainTracker_t734_il2cpp_TypeInfo,
+	&SmartTerrainTrackerImpl_t735_il2cpp_TypeInfo,
+	&TextTracker_t736_il2cpp_TypeInfo,
+	&UpDirection_t738_il2cpp_TypeInfo,
+	&TextTrackerImpl_t739_il2cpp_TypeInfo,
+	&TypeMapping_t741_il2cpp_TypeInfo,
+	&WebCamTexAdaptorImpl_t743_il2cpp_TypeInfo,
+	&Word_t750_il2cpp_TypeInfo,
+	&WordImpl_t745_il2cpp_TypeInfo,
+	&WordPrefabCreationMode_t746_il2cpp_TypeInfo,
+	&WordManager_t747_il2cpp_TypeInfo,
+	&WordManagerImpl_t758_il2cpp_TypeInfo,
+	&WordResult_t761_il2cpp_TypeInfo,
+	&WordResultImpl_t762_il2cpp_TypeInfo,
+	&WordList_t737_il2cpp_TypeInfo,
+	&WordListImpl_t763_il2cpp_TypeInfo,
+	&IQCARWrapper_t767_il2cpp_TypeInfo,
+	&QCARNativeIosWrapper_t764_il2cpp_TypeInfo,
+	&QCARNullWrapper_t765_il2cpp_TypeInfo,
+	&QCARNativeWrapper_t766_il2cpp_TypeInfo,
+	&QCARWrapper_t768_il2cpp_TypeInfo,
+	&ISmartTerrainEventHandler_t777_il2cpp_TypeInfo,
+	&ITextRecoEventHandler_t820_il2cpp_TypeInfo,
+	&IUserDefinedTargetEventHandler_t823_il2cpp_TypeInfo,
+	&KeepAliveAbstractBehaviour_t90_il2cpp_TypeInfo,
+	&ReconstructionAbstractBehaviour_t98_il2cpp_TypeInfo,
+	&PropAbstractBehaviour_t95_il2cpp_TypeInfo,
+	&StateManager_t198_il2cpp_TypeInfo,
+	&StateManagerImpl_t717_il2cpp_TypeInfo,
+	&InitState_t787_il2cpp_TypeInfo,
+	&UpdateState_t788_il2cpp_TypeInfo,
+	&TargetSearchResult_t789_il2cpp_TypeInfo,
+	&TargetFinder_t675_il2cpp_TypeInfo,
+	&TargetFinderState_t792_il2cpp_TypeInfo,
+	&InternalTargetSearchResult_t793_il2cpp_TypeInfo,
+	&TargetFinderImpl_t796_il2cpp_TypeInfo,
+	&TrackableSource_t646_il2cpp_TypeInfo,
+	&TrackableSourceImpl_t797_il2cpp_TypeInfo,
+	&TextureRenderer_t798_il2cpp_TypeInfo,
+	&TrackerManager_t194_il2cpp_TypeInfo,
+	&TrackerManagerImpl_t800_il2cpp_TypeInfo,
+	&Sensitivity_t801_il2cpp_TypeInfo,
+	&VirtualButton_t655_il2cpp_TypeInfo,
+	&VirtualButtonImpl_t802_il2cpp_TypeInfo,
+	&WebCamImpl_t664_il2cpp_TypeInfo,
+	&ProfileData_t803_il2cpp_TypeInfo,
+	&ProfileCollection_t691_il2cpp_TypeInfo,
+	&WebCamProfile_t805_il2cpp_TypeInfo,
+	&ITrackableEventHandler_t220_il2cpp_TypeInfo,
+	&ITrackerEventHandler_t816_il2cpp_TypeInfo,
+	&IVirtualButtonEventHandler_t826_il2cpp_TypeInfo,
+	&ImageTargetAbstractBehaviour_t76_il2cpp_TypeInfo,
+	&MarkerAbstractBehaviour_t84_il2cpp_TypeInfo,
+	&MaskOutAbstractBehaviour_t81_il2cpp_TypeInfo,
+	&MultiTargetAbstractBehaviour_t85_il2cpp_TypeInfo,
+	&InitError_t156_il2cpp_TypeInfo,
+	&QCARHint_t808_il2cpp_TypeInfo,
+	&StorageType_t809_il2cpp_TypeInfo,
+	&QCARUnity_t810_il2cpp_TypeInfo,
+	&WorldCenterMode_t811_il2cpp_TypeInfo,
+	&QCARAbstractBehaviour_t97_il2cpp_TypeInfo,
+	&QCARMacros_t817_il2cpp_TypeInfo,
+	&WebCamUsed_t818_il2cpp_TypeInfo,
+	&QCARRuntimeUtilities_t159_il2cpp_TypeInfo,
+	&SurfaceUtilities_t167_il2cpp_TypeInfo,
+	&TextRecoAbstractBehaviour_t87_il2cpp_TypeInfo,
+	&SimpleTargetData_t821_il2cpp_TypeInfo,
+	&TurnOffAbstractBehaviour_t83_il2cpp_TypeInfo,
+	&UserDefinedTargetBuildingAbstractBehaviour_t108_il2cpp_TypeInfo,
+	&VideoBackgroundAbstractBehaviour_t110_il2cpp_TypeInfo,
+	&VideoTextureRendererAbstractBehaviour_t112_il2cpp_TypeInfo,
+	&VirtualButtonAbstractBehaviour_t82_il2cpp_TypeInfo,
+	&WebCamAbstractBehaviour_t115_il2cpp_TypeInfo,
+	&WordAbstractBehaviour_t86_il2cpp_TypeInfo,
+	&WordFilterMode_t827_il2cpp_TypeInfo,
+	&__StaticArrayInitTypeSizeU3D24_t828_il2cpp_TypeInfo,
+	&U3CPrivateImplementationDetailsU3EU7B66DCC020U2DEBD6U2D4DBAU2DA757U2D272BEBA33044U7D_t829_il2cpp_TypeInfo,
+	NULL,
+};
+extern Il2CppImage g_Qualcomm_Vuforia_UnityExtensions_dll_Image;
+extern CustomAttributesCache g_Qualcomm_Vuforia_UnityExtensions_Assembly__CustomAttributeCache;
+Il2CppAssembly g_Qualcomm_Vuforia_UnityExtensions_Assembly = 
+{
+	{ "Qualcomm.Vuforia.UnityExtensions", 0, 0, 0, { 0 }, 32772, 0, 0, 0, 0, 0, 0 },
+	&g_Qualcomm_Vuforia_UnityExtensions_dll_Image,
+	&g_Qualcomm_Vuforia_UnityExtensions_Assembly__CustomAttributeCache,
+};
+Il2CppImage g_Qualcomm_Vuforia_UnityExtensions_dll_Image = 
+{
+	 "Qualcomm.Vuforia.UnityExtensions.dll" ,
+	&g_Qualcomm_Vuforia_UnityExtensions_Assembly,
+	g_Qualcomm_Vuforia_UnityExtensions_Assembly_Types,
+	215,
+	NULL,
+};
+static void s_Qualcomm_Vuforia_UnityExtensionsRegistration()
+{
+	RegisterAssembly (&g_Qualcomm_Vuforia_UnityExtensions_Assembly);
+}
+static il2cpp::utils::RegisterRuntimeInitializeAndCleanup s_Qualcomm_Vuforia_UnityExtensionsRegistrationVariable(&s_Qualcomm_Vuforia_UnityExtensionsRegistration, NULL);
