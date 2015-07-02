@@ -34,7 +34,7 @@ ModelImporter:
     addColliders: 0
     importBlendShapes: 0
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 0
     keepQuads: 0
@@ -45,8 +45,8 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
-    normalSmoothAngle: 60
-    splitTangentsAcrossUV: 0
+    normalSmoothAngle: 180
+    splitTangentsAcrossUV: 1
     normalImportMode: 1
     tangentImportMode: 1
   importAnimation: 1
