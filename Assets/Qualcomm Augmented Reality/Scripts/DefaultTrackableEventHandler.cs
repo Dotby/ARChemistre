@@ -84,6 +84,7 @@ namespace Vuforia
             }
 
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
+			GameObject.Find("Manager").GetComponent<HandEmulator>().FoundMarker(mTrackableBehaviour.gameObject);
         }
 
 
