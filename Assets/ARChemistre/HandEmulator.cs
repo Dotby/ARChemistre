@@ -23,11 +23,18 @@ public class HandEmulator : MonoBehaviour {
 	public Transform startParent;
 	public Vector3 startPos;
 	public Quaternion startRot;
+	public Vector3 startScale;
+
+	public Page _PAGE = null;
+	public PagesController _PC = null;
 	
 	void Start () {
 	//	foreach(GameObject rb in activeObjects){
 		//	rb.GetComponent<Rigidbody>().isKinematic = true;
 		//}
+
+		_PC = GetComponent<PagesController>();
+		infoTxt = _PC.infoPanelText;
 	}
 
 	bool IsActive(GameObject obj){
@@ -36,6 +43,10 @@ public class HandEmulator : MonoBehaviour {
 		}
 
 		return false;
+	}
+
+	public void SendActionToPage(string act){
+		_PAGE.NewAction(act);
 	}
 
 
@@ -49,20 +60,23 @@ public class HandEmulator : MonoBehaviour {
 				{
 					if (item != lastItem || (item == null && lastItem == null)){
 						lastItem = item;
-						infoTxt.text = "Пробирка";
+
 
 						item = hit.transform.gameObject;
 						item.GetComponent<Tube>().pointer.SetActive(true);
-						hit.transform.gameObject.GetComponent<Renderer>().material.color = Color.green;
+
+						infoTxt.text = "Пробирка " + item.GetComponent<Tube>().chemistry;
+
+						//hit.transform.gameObject.GetComponent<Renderer>().material.color = Color.green;
 					}
 				}
 				else{
 					if (lastItem != null){
 						lastItem.GetComponent<Tube>().pointer.SetActive(false);
-						lastItem.gameObject.GetComponent<Renderer>().material.color = Color.white;
+						//lastItem.gameObject.GetComponent<Renderer>().material.color = Color.white;
 					}
 
-					infoTxt.text = "";
+					infoTxt.text = "Выберите объект для действия.";
 					item = null;
 				}
 			}
@@ -72,7 +86,7 @@ public class HandEmulator : MonoBehaviour {
 					lastItem.gameObject.GetComponent<Renderer>().material.color = Color.white;
 				}
 
-				infoTxt.text = "";
+				infoTxt.text = "Выберите объект для действия.";
 				item = null;
 			}
 		}
@@ -98,7 +112,26 @@ public class HandEmulator : MonoBehaviour {
 	{
 		startPos = item.transform.localPosition;
 		startRot = item.transform.localRotation;
+		startScale = item.transform.localScale;
 		startParent = item.transform.parent;
+	}
+
+	void ActivePointers(){
+		foreach(GameObject gg in activeObjects){
+			if (item == gg) {continue;}
+
+			gg.GetComponent<Tube>().pointer.SetActive(true);
+			gg.GetComponent<Tube>().pointer.transform.localRotation = Quaternion.Euler(new Vector3(90f, 0f, 0f));
+			//gg.GetComponent<Tube>().pointer.GetComponent<Renderer>().material.color = Color.yellow;
+		}
+	}
+
+	void HidePointers(){
+		foreach(GameObject gg in activeObjects){
+			gg.GetComponent<Tube>().pointer.transform.localRotation = Quaternion.Euler(new Vector3(270f, 0f, 0f));
+			gg.GetComponent<Tube>().pointer.SetActive(false);
+			//gg.GetComponent<Tube>().pointer.GetComponent<Renderer>().material.color = Color.green;
+		}
 	}
 
 	public void GetPut(){
@@ -110,17 +143,31 @@ public class HandEmulator : MonoBehaviour {
 				item.gameObject.GetComponent<Renderer>().material.color = Color.white;
 				item.transform.SetParent(hand.transform);
 				item.GetComponent<Tube>().pointer.SetActive(true);
+				item.GetComponent<Tube>().isImActive = true;
+
+				SendActionToPage("get " + item.GetComponent<Tube>().chemistry);
+
+				ActivePointers();
+
+				_PC.showChemInfo = true;
 				//item.GetComponent<Rigidbody>().isKinematic = true;
 			}
 		}
 		else{
 			//item.GetComponent<Rigidbody>().isKinematic = false;
+			AudioSource.PlayClipAtPoint(getSnd, Vector3.zero);
 			item.transform.SetParent(startParent);
 			item.transform.localPosition = startPos;
 			item.transform.localRotation = startRot;
+			item.transform.localScale = startScale;
+			item.GetComponent<Tube>().isImActive = false;
 			item.GetComponent<Tube>().pointer.SetActive(false);
+			//SendActionToPage("put");
 			inHand = null;
 			item = null;
+			_PC.infoPanelText.text = "Выберите объект для действия.";
+			_PC.showChemInfo = false;
+			HidePointers();
 		}
 	}
 }

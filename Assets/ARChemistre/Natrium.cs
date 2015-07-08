@@ -8,7 +8,7 @@ public class Natrium : MonoBehaviour {
 	public AudioClip gas = null;
 
 	public ParticleSystem[] ps; 
-	public ParticleSystem smoke;
+	//public ParticleSystem smoke;
 
 	AudioSource player;
 
@@ -40,7 +40,6 @@ public class Natrium : MonoBehaviour {
 				player.Stop(); 
 				ps[0].Stop(); 
 				ps[1].Stop();
-				PlaySnd(gas);
 				PlaySnd(gas);
 			}
 
@@ -77,7 +76,8 @@ public class Natrium : MonoBehaviour {
 	void StartGas(){
 		PlaySnd(gas);
 		player.loop = true;
-		smoke.Play();
+		ps[1].Play();
+		//smoke.Play();
 	}
 
 	void Update () {
