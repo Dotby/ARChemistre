@@ -55,6 +55,7 @@
      <None Include="Assets\ARChemistre\link.xml" />
      <None Include="Assets\Qualcomm Augmented Reality\Shaders\VertexLitWithZ.shader" />
      <None Include="Assets\ARChemistre\MyGlass.shader" />
+     <None Include="Assets\StreamingAssets\QCAR\ARChemistre.xml" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\LightCone.shader" />
      <None Include="Assets\Qualcomm Augmented Reality\Shaders\RenderVideoBackground.shader" />
      <None Include="Assets\ShaderForge\Readme.txt" />
@@ -84,7 +85,6 @@
      <None Include="Assets\Qualcomm Augmented Reality\Shaders\BrightTexture.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\PixelRotator.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\CustomLighting.shader" />
-     <None Include="Assets\StreamingAssets\QCAR\ARChemistre.xml" />
      <None Include="Assets\Resources\Vuforia_About.txt" />
      <None Include="Assets\ARChemistre\readme_SDK.txt" />
      <None Include="Assets\Qualcomm Augmented Reality\Shaders\Text3D.shader" />

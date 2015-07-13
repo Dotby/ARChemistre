@@ -167,13 +167,13 @@ public class Tube : MonoBehaviour {
 
 		if (other.gameObject.name == "fire" && onFire == true){
 			onFire = false;
-			_PAGE.NewAction("hot");
+			_PAGE.NewAction("hot " + (int)temperature);
 		}
 		
 		if (other.gameObject.name == "fluid_cup"){
 			inWater = false;
 
-			_PAGE.NewAction("water");
+			_PAGE.NewAction("water " + (int)temperature);
 		}
 	}
 }

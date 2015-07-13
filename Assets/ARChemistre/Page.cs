@@ -10,16 +10,17 @@ public class Page : MonoBehaviour {
 	public int actionNum = 0;
 	public HandEmulator _HAND = null;
 	public PagesController _PC = null;
+	public bool lessonEnd = false;
+
+	public GameObject[] activeObjects;
 
 	public string[] goalActions =
 	{
 		"get Na",
 		"mix Cl",
 		"get Na+Cl",
-		"hot",
-		"2",
-		"water",
-		"0"
+		"hot 2",
+		"water 0",
 	};
 
 	// Use this for initialization
@@ -27,6 +28,24 @@ public class Page : MonoBehaviour {
 		GameObject mng = GameObject.Find("Manager");
 		_HAND = mng.GetComponent<HandEmulator>();
 		_PC = mng.GetComponent<PagesController>();
+
+		NextQuest();
+	}
+
+	public void Detected(){
+
+	}
+
+	public void LostDetect(){
+
+	}
+
+	public bool IsActive(GameObject obj){
+		foreach(GameObject gg in activeObjects){
+			if (obj == gg) {return true;}
+		}
+		
+		return false;
 	}
 
 	public void NewAction(string action){
@@ -36,11 +55,19 @@ public class Page : MonoBehaviour {
 
 		if (action == goalActions[actionNum]){
 
+			string[] currAction = goalActions[actionNum].Split(' ');
+			string actionObj = "";
+			if (currAction.Length > 1){
+				actionObj = currAction[1];
+				action = currAction[0];
+			}
+
 			if (action == "hot"){
-				if ((int)_HAND.item.GetComponent<Tube>().temperature >= int.Parse(goalActions[actionNum +1]))
+				if ((int)_HAND.item.GetComponent<Tube>().temperature >= int.Parse(actionObj))
 				{
-					actionNum += 2;
-					if (actionNum > goalActions.Length - 1) {actionNum = goalActions.Length - 1;}
+					actionNum ++;
+					if (actionNum > goalActions.Length) {actionNum = goalActions.Length;}
+					NextQuest();
 					_PC.ShowOk();
 					if (actionNum == goalActions.Length)
 					{
@@ -53,10 +80,11 @@ public class Page : MonoBehaviour {
 			}
 
 			if (action == "water"){
-				if ((int)_HAND.item.GetComponent<Tube>().temperature <= int.Parse(goalActions[actionNum +1]))
+				if ((int)_HAND.item.GetComponent<Tube>().temperature <= int.Parse(actionObj))
 				{
-					actionNum += 2;
-					if (actionNum > goalActions.Length - 1) {actionNum = goalActions.Length - 1;}
+					actionNum ++;
+					if (actionNum > goalActions.Length) {actionNum = goalActions.Length;}
+					NextQuest();
 					_PC.ShowOk();
 					if (actionNum == goalActions.Length)
 					{
@@ -69,26 +97,58 @@ public class Page : MonoBehaviour {
 			
 
 			actionNum ++;
-			if (actionNum > goalActions.Length - 1) {actionNum = goalActions.Length - 1;}
+			if (actionNum > goalActions.Length) {actionNum = goalActions.Length;}
+			NextQuest();
 			_PC.ShowOk();
 		}
 		else{
 			Debug.Log("ТЫ СДЕЛАЛ ЧТО-ТО НЕ ТАК. БУДЬ ВНИМАТЕЛЬНЕЕ И ПОПРОБУЙ СНОВА:)");
 		}
 
-		if (actionNum == goalActions.Length - 1)
-		{
-			EndLesson();
-		}
 	}
 	
 	public void EndLesson(){
-		_PC.infoPanelText.text = "ЗАДАНИЕ ВЫПОЛНЕННО!";
-		//Debug.Log("ЗАДАНИЕ ВЫПОЛНЕННО!");
+		if (_HAND.item != null)
+		{
+			_HAND.GetPut();
+		}
+
+		_PC.DownText = "Оценка: 5+";
+		_PC.questTxt.text = "ЗАДАНИЕ ВЫПОЛНЕННО!";
+		lessonEnd = true;
 	}
 
 	// Update is called once per frame
 	void Update () {
 	
+	}
+
+	void NextQuest(){
+
+		if (actionNum == goalActions.Length)
+		{
+			EndLesson();
+			return;
+		}
+
+		string questTxt = "";
+
+		string actionObj = "";
+
+		string[] currAction = goalActions[actionNum].Split(' ');
+
+		if (currAction.Length > 1){
+			actionObj = currAction[1];
+		}
+
+		switch (currAction[0]){
+		case "get": questTxt = "Возьмите " + actionObj + "."; break;
+		case "mix": questTxt = "Смешайте с " + actionObj + "."; break;
+		case "hot": questTxt = "Нагрейте раствор до " + actionObj + " градусов."; break;
+		case "water": questTxt = "Охладите раствор в воде до " + actionObj + " градусов."; break;
+		default: break;
+		}
+
+		_PC.questTxt.text = questTxt;
 	}
 }

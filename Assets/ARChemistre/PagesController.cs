@@ -10,8 +10,23 @@ public class PagesController : MonoBehaviour {
 	public Image okSign = null;
 	public bool showOK;
 	public float waitTime = 1.0f;
-	public Text infoPanelText = null;
 	public bool showChemInfo = false;
+
+	public Text questTxt;
+
+	public Text infoTxt;
+	public string DownText {
+		get{
+			return infoTxt.text;
+		}
+		
+		set{
+			if (activePage == null) return;
+			if (activePage.lessonEnd == false){
+				infoTxt.text = value;
+			}
+		}
+	}
 
 	// Use this for initialization
 	void Start () {
@@ -33,7 +48,7 @@ public class PagesController : MonoBehaviour {
 
 		if (showChemInfo == true)
 		{
-			infoPanelText.text = "Вещество: " + activePage._HAND.item.GetComponent<Tube>().chemistry + "\nt = " + activePage._HAND.item.GetComponent<Tube>().temperature;
+			DownText = "Вещество: " + activePage._HAND.item.GetComponent<Tube>().chemistry + "\nt = " + activePage._HAND.item.GetComponent<Tube>().temperature.ToString("F2");;
 		}
 	}
 

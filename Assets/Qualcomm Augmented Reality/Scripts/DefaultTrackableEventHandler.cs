@@ -84,6 +84,10 @@ namespace Vuforia
             }
 
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
+			gameObject.GetComponent<Page>()._PC.activePage = gameObject.GetComponent<Page>();
+			gameObject.GetComponent<Page>()._PC.pageNum = gameObject.GetComponent<Page>().pageNum;
+			gameObject.GetComponent<Page>()._PC.GetComponent<HandEmulator>()._PAGE = gameObject.GetComponent<Page>();
+			gameObject.GetComponent<Page>().Detected();
         }
 
 
@@ -105,6 +109,11 @@ namespace Vuforia
             }
 
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
+
+			gameObject.GetComponent<Page>()._PC.activePage = null;
+			gameObject.GetComponent<Page>()._PC.pageNum = -1;
+			gameObject.GetComponent<Page>()._PC.GetComponent<HandEmulator>()._PAGE = null;
+			gameObject.GetComponent<Page>().LostDetect();
         }
 
         #endregion // PRIVATE_METHODS

@@ -10,11 +10,7 @@ public class HandEmulator : MonoBehaviour {
 	public GameObject hand = null;
 
 	public Camera cam = null;
-
-	public GameObject[] activeObjects;
-
-	public Text infoTxt;
-
+	
 	public AudioClip getSnd;
 	GameObject lastObj = null;
 
@@ -34,15 +30,6 @@ public class HandEmulator : MonoBehaviour {
 		//}
 
 		_PC = GetComponent<PagesController>();
-		infoTxt = _PC.infoPanelText;
-	}
-
-	bool IsActive(GameObject obj){
-		foreach(GameObject gg in activeObjects){
-			if (obj == gg) {return true;}
-		}
-
-		return false;
 	}
 
 	public void SendActionToPage(string act){
@@ -52,11 +39,15 @@ public class HandEmulator : MonoBehaviour {
 
 	void Update () {
 	
+		//if (_PC.activePage == null){return;}
+		//if (_PC.activePage.lessonEnd == true) {return;}
+
+
 		Ray ray = cam.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
 		RaycastHit hit;
 		if (inHand == null){
 			if (Physics.Raycast(ray, out hit)){
-				if (IsActive(hit.transform.gameObject) == true)
+				if (_PAGE.IsActive(hit.transform.gameObject) == true)
 				{
 					if (item != lastItem || (item == null && lastItem == null)){
 						lastItem = item;
@@ -65,7 +56,7 @@ public class HandEmulator : MonoBehaviour {
 						item = hit.transform.gameObject;
 						item.GetComponent<Tube>().pointer.SetActive(true);
 
-						infoTxt.text = "Пробирка " + item.GetComponent<Tube>().chemistry;
+						_PC.DownText = "Пробирка " + item.GetComponent<Tube>().chemistry;
 
 						//hit.transform.gameObject.GetComponent<Renderer>().material.color = Color.green;
 					}
@@ -76,17 +67,17 @@ public class HandEmulator : MonoBehaviour {
 						//lastItem.gameObject.GetComponent<Renderer>().material.color = Color.white;
 					}
 
-					infoTxt.text = "Выберите объект для действия.";
+					_PC.DownText = "Выберите объект для действия.";
 					item = null;
 				}
 			}
 			else
 			{
 				if (lastItem != null){
-					lastItem.gameObject.GetComponent<Renderer>().material.color = Color.white;
+					//lastItem.gameObject.GetComponent<Renderer>().material.color = Color.white;
 				}
 
-				infoTxt.text = "Выберите объект для действия.";
+				_PC.DownText = "Выберите объект для действия.";
 				item = null;
 			}
 		}
@@ -117,7 +108,7 @@ public class HandEmulator : MonoBehaviour {
 	}
 
 	void ActivePointers(){
-		foreach(GameObject gg in activeObjects){
+		foreach(GameObject gg in _PAGE.activeObjects){
 			if (item == gg) {continue;}
 
 			gg.GetComponent<Tube>().pointer.SetActive(true);
@@ -127,7 +118,7 @@ public class HandEmulator : MonoBehaviour {
 	}
 
 	void HidePointers(){
-		foreach(GameObject gg in activeObjects){
+		foreach(GameObject gg in _PAGE.activeObjects){
 			gg.GetComponent<Tube>().pointer.transform.localRotation = Quaternion.Euler(new Vector3(270f, 0f, 0f));
 			gg.GetComponent<Tube>().pointer.SetActive(false);
 			//gg.GetComponent<Tube>().pointer.GetComponent<Renderer>().material.color = Color.green;
@@ -135,6 +126,8 @@ public class HandEmulator : MonoBehaviour {
 	}
 
 	public void GetPut(){
+	if (_PC.activePage.lessonEnd == true) {return;}
+
 	if (inHand == null){
 			if (item != null){
 				AudioSource.PlayClipAtPoint(getSnd, Vector3.zero);
@@ -165,7 +158,7 @@ public class HandEmulator : MonoBehaviour {
 			//SendActionToPage("put");
 			inHand = null;
 			item = null;
-			_PC.infoPanelText.text = "Выберите объект для действия.";
+			_PC.DownText = "Выберите объект для действия.";
 			_PC.showChemInfo = false;
 			HidePointers();
 		}
