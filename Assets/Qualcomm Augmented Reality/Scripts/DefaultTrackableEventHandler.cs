@@ -83,11 +83,18 @@ namespace Vuforia
                 component.enabled = true;
             }
 
-            Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
-			gameObject.GetComponent<Page>()._PC.activePage = gameObject.GetComponent<Page>();
-			gameObject.GetComponent<Page>()._PC.pageNum = gameObject.GetComponent<Page>().pageNum;
-			gameObject.GetComponent<Page>()._PC.GetComponent<HandEmulator>()._PAGE = gameObject.GetComponent<Page>();
-			gameObject.GetComponent<Page>().Detected();
+			if (Application.loadedLevelName == "SchoolBag"){
+				GameObject.Find("Manager").GetComponent<PagesController>().book = gameObject.GetComponent<Cover>().bookName;
+			}
+
+			if (Application.loadedLevelName == "Chemistry"){
+	            Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
+				GameObject.Find("SceneControl").GetComponent<ChemistryControl>().activePage = gameObject.GetComponent<ChemistryPage>();
+				GameObject.Find("SceneControl").GetComponent<ChemistryControl>().pageNum = gameObject.GetComponent<ChemistryPage>().pageNum;
+				GameObject.Find("SceneControl").GetComponent<HandEmulator>()._PAGE = gameObject.GetComponent<ChemistryPage>();
+				//gameObject.GetComponent<ChemistryPage>().Detected();
+			}
+
         }
 
 
@@ -110,10 +117,12 @@ namespace Vuforia
 
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
 
-			gameObject.GetComponent<Page>()._PC.activePage = null;
-			gameObject.GetComponent<Page>()._PC.pageNum = -1;
-			gameObject.GetComponent<Page>()._PC.GetComponent<HandEmulator>()._PAGE = null;
-			gameObject.GetComponent<Page>().LostDetect();
+			if (Application.loadedLevelName == "Chemistry"){
+				GameObject.Find("SceneControl").GetComponent<ChemistryControl>().activePage = null;
+				//gameObject.GetComponent<ChemistryControl>().pageNum = -1;
+				GameObject.Find("SceneControl").GetComponent<HandEmulator>()._PAGE = null;
+				//gameObject.GetComponent<Page>().LostDetect();
+			}
         }
 
         #endregion // PRIVATE_METHODS
