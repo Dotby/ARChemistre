@@ -27,6 +27,7 @@ public class BookSelect : MonoBehaviour {
 		switch(name){
 		case "Chemistry": return "Химия 9 класс"; break;
 		case "History": return "История 9 класс"; break;
+		case "Geometry": return "Геометрия 7 класс"; break;
 		default: return "---"; break;
 		}
 	}

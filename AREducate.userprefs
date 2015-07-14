@@ -1,15 +1,15 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\ARSchoolBook\ARChemistre\ChemistryControl.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\ARSchoolBook\BookSelect.cs">
     <Files>
-      <File FileName="Assets\ARSchoolBook\ARChemistre\ChemistryControl.cs" Line="52" Column="43" />
-      <File FileName="Assets\Qualcomm Augmented Reality\Scripts\DefaultTrackableEventHandler.cs" Line="120" Column="52" />
+      <File FileName="Assets\ARSchoolBook\ARChemistre\ChemistryControl.cs" Line="38" Column="38" />
+      <File FileName="Assets\Qualcomm Augmented Reality\Scripts\DefaultTrackableEventHandler.cs" Line="121" Column="88" />
       <File FileName="Assets\ARSchoolBook\Cover.cs" Line="1" Column="1" />
-      <File FileName="Assets\ARSchoolBook\ARChemistre\PagesController.cs" Line="12" Column="34" />
-      <File FileName="Assets\ARSchoolBook\BookSelect.cs" Line="28" Column="51" />
+      <File FileName="Assets\ARSchoolBook\ARChemistre\PagesController.cs" Line="28" Column="4" />
+      <File FileName="Assets\ARSchoolBook\BookSelect.cs" Line="9" Column="25" />
       <File FileName="Assets\ARSchoolBook\ARChemistre\HandEmulator.cs" Line="33" Column="26" />
-      <File FileName="Assets\ARSchoolBook\ARChemistre\Tube.cs" Line="40" Column="74" />
-      <File FileName="Assets\ARSchoolBook\ARChemistre\ChemistryPage.cs" Line="30" Column="14" />
+      <File FileName="Assets\ARSchoolBook\ARChemistre\Tube.cs" Line="1" Column="1" />
+      <File FileName="Assets\ARSchoolBook\ARChemistre\ChemistryPage.cs" Line="25" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

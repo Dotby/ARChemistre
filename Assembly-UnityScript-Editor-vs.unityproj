@@ -51,6 +51,7 @@
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
      <None Include="Assets\ARSchoolBook\ARChemistre\link.xml" />
      <None Include="Assets\Qualcomm Augmented Reality\Shaders\VertexLitWithZ.shader" />
+     <None Include="Assets\StreamingAssets\QCAR\AREducate_covers.xml" />
      <None Include="Assets\ARSchoolBook\ARChemistre\MyGlass.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\LightCone.shader" />
      <None Include="Assets\Qualcomm Augmented Reality\Shaders\RenderVideoBackground.shader" />
@@ -60,6 +61,7 @@
      <None Include="Assets\Plugins\Android\VuforiaMediaSource\AndroidManifest.xml" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\Vegetation.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\VertexAnimation.shader" />
+     <None Include="Assets\StreamingAssets\QCAR\ARGeometry.xml" />
      <None Include="Assets\ARSchoolBook\ARChemistre\license_3rdpartynotice.txt" />
      <None Include="Assets\Plugins\Android\VuforiaMediaSource\build.xml" />
      <None Include="Assets\Qualcomm Augmented Reality\Shaders\VideoBackground.shader" />
@@ -83,7 +85,6 @@
      <None Include="Assets\Qualcomm Augmented Reality\Shaders\BrightTexture.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\PixelRotator.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\CustomLighting.shader" />
-     <None Include="Assets\StreamingAssets\QCAR\AREducate_covers.xml" />
      <None Include="Assets\Resources\Vuforia_About.txt" />
      <None Include="Assets\ARSchoolBook\ARChemistre\readme_SDK.txt" />
      <None Include="Assets\Qualcomm Augmented Reality\Shaders\Text3D.shader" />
